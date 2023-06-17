@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { ThemeProvider } from "@mui/material";
+import { ToastContainer } from "react-toastify";
+
+import Theme from "assets/styles/Theme";
+import ContainerWithHistory from "components/containers";
+
+import "assets/styles/App.css";
+import "react-toastify/dist/ReactToastify.min.css";
+
+const App = (): React.ReactElement => (
+  <div className='App'>
+    <ThemeProvider theme={Theme}>
+      <ContainerWithHistory />
+      <ToastContainer
+        theme='light'
+        position='bottom-right'
+        autoClose={3000}
+        limit={5}
+        hideProgressBar={false}
+        rtl={false}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+    </ThemeProvider>
+  </div>
+);
 
 export default App;
+
+App.displayName = "App";
