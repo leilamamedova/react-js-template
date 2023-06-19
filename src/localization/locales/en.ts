@@ -1,6 +1,7 @@
 export const en = {
   common: {
     loading: "Loading",
+    error: "Error",
     connectionError: "Connection error",
   },
   home: {
