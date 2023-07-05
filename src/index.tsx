@@ -1,15 +1,14 @@
 import React from "react";
 
 import App from "App";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import { Wrapper } from "components/wrappers";
 
 import "assets/styles/index.css";
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <Wrapper>
     <App />
   </Wrapper>,
-  document.getElementById("root"),
 );
