@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-
 import i18n from "localization";
 import { toast } from "react-toastify";
 
